@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2GIG Alarm Panel | Onboarding Practice</title>
+<style>
+:root{font-family:Arial,Helvetica,sans-serif;color:#263841;background:#f2f5f7}*{box-sizing:border-box}body{margin:0;padding:20px}button{font:inherit;cursor:pointer}button:focus-visible{outline:3px solid #174cb8;outline-offset:3px}.wrap{max-width:940px;margin:auto}.head{display:flex;justify-content:space-between;gap:15px;align-items:center;flex-wrap:wrap;margin-bottom:14px}h1{font-size:23px;margin:0 0 4px}.subhead{font-size:13px;color:#53656e}.label{padding:6px 12px;border-radius:20px;background:#dcece5;color:#276147;font-weight:700;font-size:12px}.notice{padding:11px 15px;border-left:4px solid #b17a1a;background:#fff9e9;margin-bottom:15px;font-size:13px;line-height:1.5}.panel{background:#232629;padding:13px;border:8px solid #33383c;border-radius:16px;box-shadow:0 12px 26px #1122}.screen{background:linear-gradient(135deg,#fff 0%,#f8fbfc 50%,#e7f5f8 100%);min-height:425px;display:flex;flex-direction:column;color:#5b686d}.bar{background:linear-gradient(white,#f4f6f7);display:flex;justify-content:space-between;align-items:center;padding:12px 15px;border-bottom:1px solid #c7d2d5;gap:8px;font-size:14px}.brand{color:#7196aa;font-size:23px;white-space:nowrap}.brand strong{font-weight:400;color:#74828b}.shield{width:36px;height:36px;vertical-align:middle}.barstatus{display:flex;gap:10px;align-items:center;font-size:15px;color:#394d54}.body{padding:20px 28px 12px;flex:1;display:flex;flex-direction:column}.dateline{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #bdc8ce;padding-bottom:12px;color:#89969c}.date{font-size:15px;line-height:1.4}.clock{font-size:36px;font-weight:300}.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,205px));justify-content:center;gap:52px;margin:36px 0 14px}.tile{min-height:181px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;border:1px solid #cfd9e0;background:linear-gradient(#fbfbfd,#e7f3f6);color:#4a8978;border-radius:6px;box-shadow:0 5px 9px #17252a19;padding:12px 0 0}.tile svg{width:76px;height:76px}.tile>span{font-size:17px;letter-spacing:.2px}.tilefooter{border-top:1px solid #d4e0e5;width:100%;display:flex;color:#9aabb0}.tilefooter span{width:50%;padding:11px;font-size:19px}.tilefooter span+span{border-left:1px solid #d4e0e5}.panelbottom{display:flex;justify-content:space-between;padding:0 14px 12px;font-size:25px;color:#8b9a9e}.asterisk{color:#d95b62}.footnote{text-align:center;color:#a7b0b4;font-size:10px;letter-spacing:2px;padding:10px 0 0}.prompt{max-width:420px;margin:15px auto;text-align:center}.prompt h2{font-size:21px;color:#44636b;margin:0 0 8px}.dots{font-size:28px;letter-spacing:12px;color:#2c7587;min-height:42px;margin:12px 0}.pad{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:315px;margin:auto}.key{min-height:52px;border:1px solid #afc5d0;background:linear-gradient(white,#e2edf1);border-radius:5px;font-size:22px;color:#4c6470}.key.alt{font-size:14px}.message{background:white;border:1px solid #d6e1e6;border-radius:9px;padding:13px 15px;margin:14px 0;line-height:1.5;font-size:15px}.below{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}.btn{background:#146b85;color:white;border:none;border-radius:7px;padding:10px 15px;font-weight:700}.btn.secondary{background:#e4edf1;color:#244a5b}.complete{text-align:center;margin:auto;max-width:500px}.complete h2{font-size:25px}.check{font-size:68px;color:#2e9a6c}.tasks{display:flex;gap:12px;flex-wrap:wrap}.task{background:white;border:1px solid #d5e0e5;border-radius:18px;padding:6px 12px;font-size:13px}.task.done{background:#dbf1e5;border-color:#a7d4bb}.small{color:#53666e;font-size:12px}.guide{background:white;border-radius:10px;padding:16px;margin-top:15px;font-size:14px;line-height:1.5}.guide h2{font-size:17px;margin-top:0}.guide p{margin:7px 0}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(max-width:600px){body{padding:9px}.panel{padding:6px;border-width:5px}.screen{min-height:395px}.body{padding:14px 12px}.brand{font-size:17px}.bar{padding:10px}.clock{font-size:27px}.tiles{gap:14px;margin:29px 0}.tile{min-height:164px}.tile svg{width:61px;height:61px}.tile>span{font-size:14px}.notice{font-size:12px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+ <div class="head"><div><h1>2GIG Security Panel Training</h1><div class="subhead">Interactive onboarding exercise | Practice only</div></div><span class="label" id="statusBadge">DEACTIVATED</span></div>
+ <div class="notice"><strong>Site-specific training behavior:</strong> This exercise follows the requested local workflow: <b>ARM AWAY</b> activates and <b>ARM STAY</b> deactivates. On standard 2GIG systems, Arm Stay normally <em>arms</em> perimeter protection rather than disarming it. Verify your actual installation's operating procedure with the alarm provider before using this module to train staff. Never enter your real alarm PIN in this exercise.</div>
+ <div class="tasks" aria-label="Required exercises"><span class="task" id="taskAway">○ Activate using ARM AWAY</span><span class="task" id="taskStay">○ Deactivate using ARM STAY</span></div>
+ <div class="panel" style="margin-top:12px"><div class="screen">
+  <div class="bar"><div class="barstatus"><svg id="topShield" class="shield" viewBox="0 0 64 72" aria-hidden="true"><path d="M32 2L61 13v25c0 14-12 24-29 32C15 62 3 52 3 38V13Z" fill="#65c780"/><path d="M17 34l10 10 21-24" fill="none" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg><span id="panelStatus">Ready to Arm</span></div><div class="brand"><span style="font-size:16px">☾ ◖)) ◫</span> ⬡<strong>2GIG</strong></div></div>
+  <div id="display" class="body" aria-live="polite"></div>
+  <div class="panelbottom"><span class="asterisk" aria-label="Emergency control not functional">✱</span><span style="font-size:12px;align-self:center">TRAINING ONLY</span><span aria-label="Settings not functional">⚙</span></div>
+ </div><div class="footnote">SIMULATED CONTROL PANEL • NOT CONNECTED TO SECURITY HARDWARE</div></div>
+ <div class="message" role="status" aria-live="polite" id="feedback">Begin by selecting ARM AWAY. Enter the training PIN when prompted.</div>
+ <div class="below"><div><strong>Training PIN: 1234</strong><div class="small">Complete both transitions to pass the exercise.</div></div><button class="btn secondary" id="reset" type="button">↻ Restart training</button></div>
+ <section class="guide"><h2>Training objectives</h2><p>1. Select <strong>ARM AWAY</strong> and enter the simulated PIN to activate the alarm.</p><p>2. Return to the home screen, select <strong>ARM STAY</strong>, and enter the simulated PIN to deactivate it.</p><p>3. Confirm both operations to complete the simulation. This is a standalone learning activity. <strong>Canvas Gradebook completion is not reported automatically</strong> by this HTML file.</p></section>
+</main>
+<script>
+(function(){
+'use strict';
+var state={armed:false,page:'home',pin:'',operation:null,awayDone:false,stayDone:false,errors:0};
+var el=function(id){return document.getElementById(id)};
+var display=el('display');
+var icon=function(away){return '<svg viewBox="0 0 64 72" role="img" aria-label="'+(away?'Away':'Stay')+' icon"><path d="M32 2L61 13v25c0 14-12 24-29 32C15 62 3 52 3 38V13Z" fill="#57b982"/><circle cx="29" cy="24" r="10" fill="white"/><path d="M12 53c1-14 7-20 17-20s17 6 18 20" fill="white"/>'+(away?'<path d="M39 20h11v-6l12 15-12 15v-7H39Z" fill="white"/>':'')+'</svg>'};
+function tile(name,op){return '<button type="button" class="tile" data-action="'+op+'" aria-label="'+name+'"><span>'+icon(op==='away')+'</span><span>'+name+'</span><span class="tilefooter" aria-hidden="true"><span>◖))</span><span>◴</span></span></button>'}
+function say(t){el('feedback').textContent=t}
+function render(){
+ el('statusBadge').textContent=state.armed?'ACTIVATED · AWAY':'DEACTIVATED';
+ el('panelStatus').textContent=state.armed?'System Armed Away':'Ready to Arm';
+ el('taskAway').textContent=(state.awayDone?'✓':'○')+' Activate using ARM AWAY';
+ el('taskStay').textContent=(state.stayDone?'✓':'○')+' Deactivate using ARM STAY';
+ el('taskAway').classList.toggle('done',state.awayDone);el('taskStay').classList.toggle('done',state.stayDone);
+ if(state.page==='home'){
+ display.innerHTML='<div class="dateline"><div class="date">Thursday<br>October 22</div><div class="clock">7:11 AM</div></div><div class="tiles">'+tile('ARM STAY','stay')+tile('ARM AWAY','away')+'</div><p class="small" style="text-align:center;margin-top:8px">'+(state.armed?'Activated: select ARM STAY for deactivation practice.':'Deactivated: select ARM AWAY for activation practice.')+'</p>';
+ }else if(state.page==='pin'){
+ display.innerHTML='<div class="prompt"><h2>'+(state.operation==='away'?'Activate: ARM AWAY':'Deactivate: ARM STAY')+'</h2><p>Enter the four-digit training PIN</p><div class="dots" aria-label="'+state.pin.length+' of 4 PIN digits entered">'+('●'.repeat(state.pin.length)+'○'.repeat(4-state.pin.length))+'</div><div class="pad">'+[1,2,3,4,5,6,7,8,9,'Clear',0,'Cancel'].map(function(n){return '<button type="button" class="key '+(typeof n==='number'?'':'alt')+'" data-action="'+(typeof n==='number'?'digit-'+n:String(n).toLowerCase())+'">'+n+'</button>'}).join('')+'</div><p class="small">Use PIN 1234. Never use your real security code.</p></div>';
+ }else if(state.page==='success'){
+ display.innerHTML='<div class="complete"><div class="check" aria-hidden="true">✓</div><h2>'+(state.armed?'ALARM ACTIVATED':'ALARM DEACTIVATED')+'</h2><p>Correct training PIN entered. Operation successful.</p><button type="button" class="btn" data-action="home">Return to Home Screen</button></div>';
+ }else if(state.page==='finished'){
+ display.innerHTML='<div class="complete"><div class="check" aria-hidden="true">✓</div><h2>Training Complete</h2><p>You activated and deactivated the simulated alarm using the required PIN for each operation.</p><p><strong>Both practice exercises passed.</strong></p><button type="button" class="btn" data-action="home">Review Home Screen</button></div>';
+ }
+}
+function start(op){
+ if(op==='away'&&state.armed){say('Already activated. To practice deactivation, choose ARM STAY.');return}
+ if(op==='stay'&&!state.armed){say('Already deactivated. To practice activation, choose ARM AWAY.');return}
+ state.operation=op;state.pin='';state.page='pin';render();say('Enter the practice PIN 1234 to '+(op==='away'?'activate':'deactivate')+' the simulated system.');
+}
+function digit(n){
+ if(state.pin.length>=4)return;state.pin+=n;
+ if(state.pin.length===4){
+  if(state.pin==='1234'){
+   state.armed=state.operation==='away';
+   if(state.armed)state.awayDone=true;else state.stayDone=true;
+   if(state.awayDone&&state.stayDone){state.page='finished';say('✓ Training complete: both activation and deactivation were performed successfully.');}
+   else{state.page='success';say('✓ Alarm '+(state.armed?'activated':'deactivated')+'. Return Home to complete the other exercise.');}
+  }else{state.errors++;state.pin='';say('Incorrect PIN. Try again using the training PIN 1234.');}
+ }
+ render();
+}
+display.addEventListener('click',function(e){var b=e.target.closest('button[data-action]');if(!b)return;var a=b.getAttribute('data-action');if(a==='away'||a==='stay')start(a);else if(a.indexOf('digit-')===0)digit(a.slice(6));else if(a==='clear'){state.pin='';render();say('PIN entry cleared.');}else if(a==='cancel'){state.pin='';state.page='home';state.operation=null;render();say('PIN entry canceled. Alarm state unchanged.');}else if(a==='home'){state.page='home';render();say(state.armed?'Now practice deactivation with ARM STAY.':'You may restart the exercise or review the panel.')}});
+el('reset').addEventListener('click',function(){state={armed:false,page:'home',pin:'',operation:null,awayDone:false,stayDone:false,errors:0};render();say('Training restarted. Select ARM AWAY to begin.');});
+render();
+})();
+</script>
+</body>
+</html>
